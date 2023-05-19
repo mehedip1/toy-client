@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/images/logo.jfif'
 
+
 const Navbar = () => {
     return (
         <div className="navbar bg-cyan-400	">
@@ -43,6 +44,7 @@ const Navbar = () => {
       </ul>
     </div>
       </div>
+     
         </div>
     );
 };
