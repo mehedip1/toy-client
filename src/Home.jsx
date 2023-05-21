@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Share/Navbar';
 import Slider from './Share/Slider';
+import Service from './Share/Service';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
                 <h2 className=''>Everything you need <br /> Start....</h2>
             </div>
             <Slider></Slider>
+            <Service></Service>
         </div>
     );
 };
