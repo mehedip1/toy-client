@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Header from './Header';
+
 
 const Navbar = () => {
   return (
@@ -12,12 +13,7 @@ const Navbar = () => {
     <div className="flex-1">
     <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
     <section className='mx-auto'>
-      <div className=''>
-       <Link className='ms-2' to='/home'>Home</Link>
-        <Link className='ms-2' to='/old'>My Toy</Link>
-        <Link className='ms-3' to='/new'>All toy</Link>
-        <Link className='ms-4' to='/blog'>Blog</Link>
-       </div>
+        <Header></Header>
       </section>
   </div>
     
