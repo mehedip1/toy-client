@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
@@ -11,6 +10,9 @@ import Login from './Share/Login';
 import Blog from './Share/Blog';
 import MyToy from './Share/MyToy';
 import AllToy from './Share/AllToy';
+import React from 'react';
+import Signup from './Share/Signup';
+import AuthProvider from './Providers/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element: <Login></Login>
+      },
+      {
+        path:'/signup',
+        element: <Signup></Signup>
       },
       {
         path: '/blog',
@@ -45,7 +51,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='max-w-7xl mx-auto'>
     <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+   <AuthProvider>
+   <RouterProvider router={router}></RouterProvider>
+   </AuthProvider>
    </React.StrictMode>,
   </div>
 )

@@ -1,5 +1,5 @@
-import React from 'react';
 import Header from './Header';
+import logo from '../../src/assets/images/logo.jfif'
 
 
 const Navbar = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img src={logo} />
         </div>
       </label>
 

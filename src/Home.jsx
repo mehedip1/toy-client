@@ -1,4 +1,3 @@
-import React from 'react';
 import Slider from './Share/Slider';
 import Service from './Share/Service';
 import Category from './Share/Category';
