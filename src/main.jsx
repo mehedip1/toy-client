@@ -16,6 +16,7 @@ import AuthProvider from './Providers/AuthProvider';
 import Update from './Share/Update';
 import PrivateRoute from './Share/Routes/PrivateRoute';
 import AddToy from './Share/AddToy';
+import View from './Share/View';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: 'addToy',
         element: <AddToy></AddToy>
+      },
+      {
+        path: 'view',
+        element: <View></View>
       }
     ]
     

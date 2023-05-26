@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ToyCard from './ToyCard';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -8,7 +9,7 @@ const Tabs = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto">
+    <div className="w-full mx-auto p-4">
       <div className="flex mb-4">
         <button
           className={`flex-1 p-4 ${
@@ -16,7 +17,7 @@ const Tabs = () => {
           }`}
           onClick={() => handleTabClick(1)}
         >
-          Iron man
+          Action Toy
         </button>
         <button
           className={`flex-1 p-4 ${
@@ -24,7 +25,7 @@ const Tabs = () => {
           }`}
           onClick={() => handleTabClick(2)}
         >
-          Thor
+          Super Hero
         </button>
         <button
           className={`flex-1 p-4 ${
@@ -32,14 +33,14 @@ const Tabs = () => {
           }`}
           onClick={() => handleTabClick(3)}
         >
-          Thons
+          War Toy
         </button>
       </div>
 
       <div className="p-4 bg-gray-200">
-        {activeTab === 1 && <h1>Content for Tab 1</h1>}
-        {activeTab === 2 && <h1>Content for Tab 2</h1>}
-        {activeTab === 3 && <h1>Content for Tab 3</h1>}
+        {activeTab === 1 && <h1><ToyCard></ToyCard></h1>}
+        {activeTab === 2 && <h1><ToyCard></ToyCard></h1>}
+        {activeTab === 3 && <h1><ToyCard></ToyCard></h1>}
       </div>
     </div>
   );
