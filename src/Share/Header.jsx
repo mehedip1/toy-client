@@ -6,8 +6,9 @@ const Header = () => {
               <div className=''>
        <Link className='ms-2' to='/home'>Home</Link>
         <Link className='ms-2' to='/myToy'>My Toy</Link>
-        <Link className='ms-3' to='/allToy'>All toy</Link>
+        <Link className='ms-3' to='/allToy'>All Toy</Link>
         <Link className='ms-4' to='/blog'>Blog</Link>
+        <Link className='ms-4' to='/addToy'>Add Toy</Link>
        </div>
         </div>
     );

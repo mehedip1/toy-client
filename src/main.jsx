@@ -13,6 +13,9 @@ import AllToy from './Share/AllToy';
 import React from 'react';
 import Signup from './Share/Signup';
 import AuthProvider from './Providers/AuthProvider';
+import Update from './Share/Update';
+import PrivateRoute from './Share/Routes/PrivateRoute';
+import AddToy from './Share/AddToy';
 
 const router = createBrowserRouter([
   {
@@ -20,28 +23,41 @@ const router = createBrowserRouter([
     element: <Layout></Layout>,
     children: [
       {
-        path: '/home',
+        path: 'home',
         element:<Home></Home>
       },
       {
-        path:'/login',
+        path:'login',
         element: <Login></Login>
       },
       {
-        path:'/signup',
+        path:'signup',
         element: <Signup></Signup>
       },
       {
-        path: '/blog',
+        path: 'blog',
         element: <Blog></Blog>
       },
       {
-       path:'/myToy',
-       element: <MyToy></MyToy>
+       path:'myToy',
+       element: <PrivateRoute><MyToy></MyToy></PrivateRoute>
       },
       {
-       path:'/allToy',
+       path:'allToy',
        element: <AllToy></AllToy>
+      },
+      {
+        path:'addToy/:id',
+        element:<AddToy></AddToy>,
+        loader :() => fetch ()
+      },
+      {
+        path: 'update/:id',
+        element: <Update></Update>
+      },
+      {
+        path: 'addToy',
+        element: <AddToy></AddToy>
       }
     ]
     
