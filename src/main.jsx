@@ -16,11 +16,13 @@ import AuthProvider from './Providers/AuthProvider';
 import Update from './Share/Update';
 import AddToy from './Share/AddToy';
 import View from './Share/View';
+import Error from './Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
