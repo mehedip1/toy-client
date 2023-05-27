@@ -8,8 +8,9 @@ const Slider = () => {
     return (
         <>
        <section className='grid grid-cols-2'>
-       <div>
-        <h2 className='text-5xl font-bold text center'>Hello I am here</h2>
+       <div className='mt-5'>
+        <h2 className='text-5xl font-bold text p-5 center ms-5'>Let's Play together..!</h2>
+        <p className='text-3xl p-4 ms-5'>Play with Action toy.</p>
        </div>
       
        <div className="h-96 carousel carousel-vertical rounded-box">

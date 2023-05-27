@@ -1,17 +1,18 @@
 import Header from './Header';
 import logo from '../../src/assets/images/logo.jfif'
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
   return (
     <div>
-      <h2 className='text-center font-bold text-5xl'>Arrival of Toys</h2>
+      <h2 className='text-center font-bold text-5xl'>Toy Market</h2>
     
 
-      <section>
-      <div className="navbar bg-lime-500">
+      <section className='mt-5'>
+      <div className="navbar bg-indigo-300	">
     <div className="flex-1">
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <a className="btn btn-ghost normal-case text-xl">Arrival of Toy</a>
     <section className='mx-auto'>
         <Header></Header>
       </section>
@@ -33,13 +34,15 @@ const Navbar = () => {
 
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
         <li>
+          <Link to='home'>
           <a className="justify-between">
             Profile
-            <span className="badge">New</span>
-          </a>
+            </a>
+          </Link>
         </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+     {
+      <li><Link to='/login'> Logout</Link> </li>
+     }
       </ul>
     </div>
   </div>
