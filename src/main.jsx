@@ -14,7 +14,6 @@ import React from 'react';
 import Signup from './Share/Signup';
 import AuthProvider from './Providers/AuthProvider';
 import Update from './Share/Update';
-import PrivateRoute from './Share/Routes/PrivateRoute';
 import AddToy from './Share/AddToy';
 import View from './Share/View';
 
@@ -24,7 +23,7 @@ const router = createBrowserRouter([
     element: <Layout></Layout>,
     children: [
       {
-        path: 'home',
+        path: '/',
         element:<Home></Home>
       },
       {
