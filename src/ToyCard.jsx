@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ToyCard = ({card}) => {
     const [cards , SetCard] = useState([]);
     useEffect(() =>{
-      fetch('http://localhost:5000/cards')
+      fetch('https://arrival-toy-projects-server.vercel.app/cards')
       .then(res => res.json())
       .then(data => SetCard(data))
       .catch(error => console.log(error))

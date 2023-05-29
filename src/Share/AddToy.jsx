@@ -17,7 +17,7 @@ const AddToy = () => {
         const newAdd = {name, email, rating, price}
         console.log(newAdd)
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://arrival-toy-projects-server.vercel.app/services',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
