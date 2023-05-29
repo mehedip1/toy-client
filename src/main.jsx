@@ -5,7 +5,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from './Main/Layout';
-import Home from './Home';
 import Login from './Share/Login';
 import Blog from './Share/Blog';
 import MyToy from './Share/MyToy';
@@ -17,6 +16,8 @@ import Update from './Share/Update';
 import AddToy from './Share/AddToy';
 import View from './Share/View';
 import Error from './Error';
+import Home from './Home';
+
 
 const router = createBrowserRouter([
   {
@@ -24,10 +25,10 @@ const router = createBrowserRouter([
     element: <Layout></Layout>,
     errorElement: <Error></Error>,
     children: [
-      {
-        path: '/',
-        element:<Home></Home>
-      },
+     {
+         path:'/',
+         element: <Home></Home>
+     },
       {
         path:'login',
         element: <Login></Login>
@@ -43,15 +44,16 @@ const router = createBrowserRouter([
       {
        path:'myToy',
        element: <MyToy></MyToy>
+    
       },
       {
        path:'allToy',
        element: <AllToy></AllToy>
       },
       {
-        path:'addToy/:id',
+        path:'addToy',
         element:<AddToy></AddToy>,
-        loader :() => fetch ('http://localhost:5000/services')
+       
       },
       {
         path: 'update',
@@ -60,7 +62,7 @@ const router = createBrowserRouter([
       {
         path: 'addToy',
         element: <AddToy></AddToy>,
-        loader: () => fetch('')
+        
       },
       {
         path: 'view',
@@ -77,6 +79,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    <AuthProvider>
    <RouterProvider router={router}></RouterProvider>
    </AuthProvider>
-   </React.StrictMode>,
+   </React.StrictMode>
   </div>
+
 )
